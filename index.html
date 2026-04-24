@@ -1,1 +1,354 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Austin McClarin | Cybersecurity</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.7;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #58a6ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #c9d1d9;
+      font-size: 0.95rem;
+    }
+
+    nav ul li a:hover { color: #58a6ff; text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+      border-bottom: 1px solid #30363d;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #1f6feb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 auto 1.5rem;
+      border: 3px solid #30363d;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: #58a6ff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary {
+      background: #1f6feb;
+      color: #ffffff;
+      border: 1px solid #1f6feb;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #c9d1d9;
+      border: 1px solid #30363d;
+    }
+
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+
+    /* SECTIONS */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #21262d;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #f0f6fc;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #30363d;
+    }
+
+    /* ABOUT */
+    .about p {
+      font-size: 1rem;
+      color: #c9d1d9;
+      max-width: 700px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-badge {
+      background: #161b22;
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* PROJECTS */
+    .project-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f0f6fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #8b949e;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: #0d419d22;
+      border: 1px solid #1f6feb55;
+      color: #58a6ff;
+      padding: 0.2rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+    }
+
+    /* CONTACT */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: #c9d1d9;
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #484f58;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      nav ul { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">Austin McClarin</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="avatar">AM</div>
+    <h1>Austin McClarin</h1>
+    <p class="tagline">Cybersecurity Enthusiast &nbsp;|&nbsp; Homelab Builder &nbsp;|&nbsp; Lifelong Learner</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn btn-primary">Get In Touch</a>
+      <a href="https://github.com/austinmcclarin" class="btn btn-secondary" target="_blank">View GitHub</a>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am passionate about technology and deeply committed to understanding how to secure every aspect of the digital world. 
+      With a hands-on approach to learning, I dedicate my time to building, breaking, and rebuilding systems in my personal homelab — 
+      because the best way to understand security is to experience it firsthand. I am dedicated, curious, and always eager to absorb 
+      something new, whether that is a new tool, technique, or concept. I believe that a strong digital presence starts with a strong 
+      foundation, and I am actively building mine — one project at a time. My goal is to grow into a cybersecurity professional who 
+      not only understands threats but knows how to proactively defend against them.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills &amp; Tools</h2>
+    <div class="skills-grid">
+      <span class="skill-badge">Networking</span>
+      <span class="skill-badge">Virtualization</span>
+      <span class="skill-badge">Proxmox</span>
+      <span class="skill-badge">Homelab Design</span>
+      <span class="skill-badge">Linux</span>
+      <span class="skill-badge">Self-Hosting</span>
+      <span class="skill-badge">DNS Management</span>
+      <span class="skill-badge">Email Security (SPF / DKIM / DMARC)</span>
+      <span class="skill-badge">Cloudflare</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Proxmox Homelab Cluster</h3>
+      <p>
+        Designed and maintain a multi-node Proxmox cluster for virtualization, network segmentation, and self-hosted services. 
+        Used as a hands-on environment for practicing real-world infrastructure and security concepts.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Proxmox</span>
+        <span class="tag">Virtualization</span>
+        <span class="tag">Networking</span>
+        <span class="tag">Linux</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Media &amp; Storage Server</h3>
+      <p>
+        Built and configured a self-hosted media and storage solution as part of my homelab infrastructure, 
+        focusing on reliability, access control, and network security.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Self-Hosting</span>
+        <span class="tag">Storage</span>
+        <span class="tag">Linux</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Personal Domain &amp; Email Infrastructure</h3>
+      <p>
+        Registered and configured amcclarin.com with Cloudflare for DNS management, WHOIS privacy, 
+        and email routing. Implemented SPF, DKIM, and DMARC records to ensure secure and authenticated email delivery.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Cloudflare</span>
+        <span class="tag">DNS</span>
+        <span class="tag">Email Security</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <div class="contact-item">
+        <div class="contact-icon">✉</div>
+        <a href="mailto:me@amcclarin.com">me@amcclarin.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#123;&#125;</div>
+        <a href="https://github.com/austinmcclarin" target="_blank">github.com/austinmcclarin</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">in</div>
+        <a href="https://www.linkedin.com/in/austin-mcclarin/" target="_blank">linkedin.com/in/austin-mcclarin</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Austin McClarin &mdash; amcclarin.com
+  </footer>
+
+</body>
+</html>
