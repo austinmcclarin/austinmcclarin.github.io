@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Austin McClarin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.7;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #58a6ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #c9d1d9;
+      font-size: 0.95rem;
+    }
+
+    nav ul li a:hover { color: #58a6ff; text-decoration: none; }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      color: #8b949e;
+      font-size: 0.95rem;
+    }
+
+    /* BLOG CONTAINER */
+    .blog-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* BLOG CARD */
+    .blog-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .blog-tag {
+      background: #0d419d22;
+      border: 1px solid #1f6feb55;
+      color: #58a6ff;
+      padding: 0.2rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+    }
+
+    .blog-date {
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+
+    .blog-card h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #f0f6fc;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #21262d;
+    }
+
+    .blog-card p {
+      font-size: 0.97rem;
+      color: #c9d1d9;
+      margin-bottom: 1rem;
+    }
+
+    .blog-card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #484f58;
+      border-top: 1px solid #21262d;
+    }
+
+    @media (max-width: 600px) {
+      .page-header h1 { font-size: 1.5rem; }
+      nav ul { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">Austin McClarin</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Blog</h1>
+    <p>Documenting what I build, learn, and discover along the way.</p>
+  </div>
+
+  <div class="blog-container">
+
+    <div class="blog-card">
+      <div class="blog-meta">
+        <span class="blog-tag">Portfolio</span>
+        <span class="blog-tag">Cybersecurity</span>
+        <span class="blog-date">April 2025</span>
+      </div>
+      <h2>How I Set Up My Cybersecurity Portfolio</h2>
+      <p>
+        Initially I had an assignment to get my own personal domain, set up a branded email, create a GitHub portfolio page, 
+        and showcase things I have done. I really enjoyed doing it. I have known for a while that I should be taking these 
+        kinds of steps, but never really took the time and effort to set myself up for career success. Today however I can say that I have.
+      </p>
+      <p>
+        I registered my very own domain name and used it to create a personal email that I actually own. Not Gmail or Yahoo. 
+        It is me@amcclarin.com and that is mine. It feels special knowing that. I set up Cloudflare for DNS management and 
+        privacy protection on my domain, and used Cloudflare Email Routing to forward messages to an existing inbox so I can 
+        receive and eventually send emails from my own domain. I also created a GitHub repository and built a portfolio page 
+        hosted on GitHub Pages that I know will grow into something much bigger over time.
+      </p>
+      <p>
+        I want to start doing these small projects and documenting everything I learn along the way, for myself and for anyone 
+        else who wants to see that I actually know what I am talking about. It is an invaluable skill that shows people I am 
+        doing the things I say I am doing. It was a lot of fun configuring everything and seeing it all come together, and I 
+        am happy knowing I am building the foundation for a bright future.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Austin McClarin &mdash; amcclarin.com
+  </footer>
+
+</body>
+</html>
